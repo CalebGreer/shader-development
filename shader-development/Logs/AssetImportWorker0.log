@@ -1,0 +1,115 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.0f1 (3721df5a8b28) revision 3613151'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16157 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/caleb/Documents/GitHub/shader-development/shader-development
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64854
+Successfully changed project path to: C:/Users/caleb/Documents/GitHub/shader-development/shader-development
+C:/Users/caleb/Documents/GitHub/shader-development/shader-development
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 22.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.0f1 (3721df5a8b28)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/caleb/Documents/GitHub/shader-development/shader-development/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics (ID=0x9b41)
+    Vendor:   
+    VRAM:     8078 MB
+    Driver:   27.20.100.8190
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006861 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 23.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.892 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002886 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.842 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.4 MB.
+System memory in use after: 80.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1585.
+Total: 1.473700 ms (FindLiveObjects: 0.161500 ms CreateObjectMapping: 0.038800 ms MarkObjects: 1.191100 ms  DeleteObjects: 0.081400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Section 9.unity
+  artifactKey: Guid(050b0918aa171f74d91af776b36c6fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Section 9.unity using Guid(050b0918aa171f74d91af776b36c6fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '922b96c9946dd7a2d769ae11b987b003') in 0.016624 seconds
+  Import took 0.018434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 67.933900 seconds.
+  path: Assets/Shaders/Section 9
+  artifactKey: Guid(573ea78e668505d4794ef872c185ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Section 9 using Guid(573ea78e668505d4794ef872c185ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21115784103ef2de89ba20abcac16db4') in 0.024770 seconds
+  Import took 0.026720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.387172 seconds.
+  path: Assets/Shaders/Section 9/PrimitiveSphere.shader
+  artifactKey: Guid(4f0e8db67d7b88042a753a94c3af9140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Section 9/PrimitiveSphere.shader using Guid(4f0e8db67d7b88042a753a94c3af9140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f290e463b6a146563ab507f909b6f23d') in 0.046853 seconds
+  Import took 0.049175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000629 seconds.
+  path: Assets/Shaders/Section 9/PrimitiveSphere.shader
+  artifactKey: Guid(4f0e8db67d7b88042a753a94c3af9140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Section 9/PrimitiveSphere.shader using Guid(4f0e8db67d7b88042a753a94c3af9140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f290e463b6a146563ab507f909b6f23d') in 0.012712 seconds
+  Import took 0.014696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 549.245930 seconds.
+  path: Assets/Shaders/Section 9/PrimitiveSphere.shader
+  artifactKey: Guid(4f0e8db67d7b88042a753a94c3af9140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Section 9/PrimitiveSphere.shader using Guid(4f0e8db67d7b88042a753a94c3af9140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '793e6b059f5c8feb4f0c256d29c339a2') in 0.011252 seconds
+  Import took 0.014805 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
