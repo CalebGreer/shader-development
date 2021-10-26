@@ -1,5 +1,10 @@
 Shader "Holistic/Section9/PrimitiveSphere"
 {
+    Properties
+    {
+        [HideInInpsector]_Position("Position", Vector) = (0,0,0,0)
+    }
+
     SubShader
     {
         Tags { "Queue" = "Transparent" }
@@ -12,21 +17,21 @@ Shader "Holistic/Section9/PrimitiveSphere"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+            #include "UnityLightingCommon.cginc"
 
             struct appdata
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                //float3 normal : NORMAL;
             };
 
             struct v2f
             {
                 float3 wPos : TEXCOORD0;
                 float4 pos : SV_POSITION;
+                //fixed4 diff : COLOR0;
             };
-
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
 
             v2f vert (appdata v)
             {
@@ -41,29 +46,43 @@ Shader "Holistic/Section9/PrimitiveSphere"
 
 			bool SphereHit(float3 p, float3 centre, float radius)
 			{
-
+                return distance(p, centre) < radius;
 			}
 
-			float RaymarchHit(float3 position, float3 direction)
+            float3 _Position;
+
+			float3 RaymarchHit(float3 position, float3 direction)
 			{
 				for (int i = 0; i < STEPS; i++)
 				{
-					if (SphereHit(position, float(0, 0, 0), 0.5))
+					if (SphereHit(position, float3(_Position), 0.5))
 					{
 						return position;
 					}
 					position += direction * STEP_SIZE;
 				}
 
-				return 0;
+				return float3(0,0,0);
 			}
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag(v2f i) : SV_Target
             {
-                // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
+                float3 viewDirection = normalize(i.wPos - _WorldSpaceCameraPos);
+                float3 worldPosition = i.wPos;
+                float3 depth = RaymarchHit(worldPosition, viewDirection);
+                
+                half3 worldNormal = depth - _Position;
+                half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
 
-                return col;
+                if (length(depth) != 0)
+                {
+                    depth *= nl * _LightColor0;
+                    return fixed4(depth, 1);
+                }
+                else
+                    return fixed4(1, 1, 1, 0); 
+
+                
             }
             ENDCG
         }
