@@ -7,6 +7,7 @@ Shader "Holistic/Section9/SphericalFog"
         _InnerRatio("Inner Ratio", Range(0.0, 0.9)) = 0.5
         _Density("Density", Range(0.0, 1.0)) = 0.5
         _Segments("Segments", Range(5, 20)) = 10
+        [HideInInspector]_Position("Position", Vector) = (0,0,0)
     }
     SubShader
     {
@@ -79,6 +80,7 @@ Shader "Holistic/Section9/SphericalFog"
             float _InnerRatio;
             float _Density;
             sampler2D _CameraDepthTexture;
+            float3 _Position;
 
             v2f vert (appdata_base v)
             {
@@ -101,7 +103,7 @@ Shader "Holistic/Section9/SphericalFog"
                 float3 viewDir = normalize(i.view);
 
                 float fog = CalculateFogIntensity(
-                    _FogCentre.xyz,
+                    _Position.xyz,
                     _FogCentre.w,
                     _InnerRatio,
                     _Density,
