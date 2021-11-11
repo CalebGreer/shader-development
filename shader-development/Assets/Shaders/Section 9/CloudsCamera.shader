@@ -171,8 +171,6 @@ Shader "Holistic/Section9/CloudsCamera"
                 MARCH(_Steps, map4, cameraPos, viewDir, bgcol, col, depth * 4, ct);
                 MARCH(_Steps, map5, cameraPos, viewDir, bgcol, col, depth * 5, ct);
 
-
-
                 return clamp(col, 0.0, 1.0);
             }
 
