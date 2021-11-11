@@ -26,19 +26,19 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2c241e3c89e06d64080dd7e6b015be19, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 1024
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.116279684, g: 0.109729715, b: 0.118484624, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -254,7 +254,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ae9344c035e2440ac65a99b1ad02e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_cloudShader: {fileID: 4800000, guid: cb3784e56d95e0848947da045079ef32, type: 3}
+  m_cloudShader: {fileID: 4800000, guid: 2cd449bdff757e1418eb1b1068f6e27f, type: 3}
   m_minHeight: -7.04
   m_maxHeight: 17.3
   m_fadeDistance: 1.76
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_steps: 30
   m_valueNoiseImage: {fileID: 2800000, guid: e2c81175fb9d8014585a89ac965c17ab, type: 3}
   m_sun: {fileID: 249114734}
-  m_material: {fileID: 1547897100}
+  m_material: {fileID: 2054667011}
 --- !u!1 &483592612
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,15 +652,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 2233f2d5bcec65844b92321231c47a24, type: 2}
---- !u!21 &1547897100
+--- !u!21 &2054667011
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Holistic/Section9/CloudsCamera
-  m_Shader: {fileID: 4800000, guid: cb3784e56d95e0848947da045079ef32, type: 3}
+  m_Name: Holistic/Section9/Plasma Clouds
+  m_Shader: {fileID: 4800000, guid: 2cd449bdff757e1418eb1b1068f6e27f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -676,6 +676,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _Scale1: 2
+    - _Scale2: 2
+    - _Scale3: 2
+    - _Scale4: 2
+    - _Speed: 10
     m_Colors: []
   m_BuildTextureStacks: []
